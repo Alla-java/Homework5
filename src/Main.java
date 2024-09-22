@@ -27,21 +27,13 @@ public class Main {
 
 
         /* Задание 3. */
-        int year = 2024;
+        int year = 1535;
 
-        if (year % 100 == 0 && year > 1584) {
-            System.out.println(year + " " + "год не является високосным");
+        if ((year % 4 == 0 && year % 100 != 0 && year > 1584) || (year % 400 == 0 && year > 1584)) {
+            System.out.println(year + " год является високосным");
         }
 
-        else if (year % 4 == 0 && year > 1584) {
-            System.out.println(year + " " + "год является високосным");
-        }
-
-        else if (year % 400 == 0 && year > 1584) {
-            System.out.println(year + " " + "год является високосным");
-        }
-
-        else if (year < 1584) {
+        else {
             System.out.println(year + " " + "год не является високосным");
         }
 
@@ -52,15 +44,15 @@ public class Main {
             System.out.println("Потребуется дней: 1");
         }
 
-        else if (deliveryDistance < 60 && deliveryDistance > 20) {
+        else if (deliveryDistance < 60 && deliveryDistance >= 20) {
             System.out.println("Потребуется дней: 2");
         }
 
-        else if (deliveryDistance < 100 && deliveryDistance > 60) {
+        else if (deliveryDistance < 100 && deliveryDistance >= 60) {
             System.out.println("Потребуется дней: 3");
         }
 
-        else if (deliveryDistance > 100) {
+        else if (deliveryDistance >= 100) {
             System.out.println("Доставки нет");
         }
 
